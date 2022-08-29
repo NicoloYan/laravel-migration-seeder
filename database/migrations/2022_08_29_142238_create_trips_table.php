@@ -16,7 +16,7 @@ class CreateTripsTable extends Migration
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
             $table->string('destination', 50);
-            $table->string('duration', 15);
+            $table->tinyInteger('duration');
             $table->decimal('price', 6, 2);
             $table->tinyInteger('is_available')->unsigned()->default(1);
             $table->text('description')->nullable();
